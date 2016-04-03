@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>jQuery Mobile test page</title>
+    <meta charset=utf-8 />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="jquery.mobile-1.4.5.min.css" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="javascript/jquery.min.js"></script>
+    <script src="javascript/jquery.mobile-1.4.5.min.js"></script>
+    <script src="javascript/scripts.js"></script>
+</head>
+<body>
+<div data-role="page">
+    <div data-role="header">
+        <h1>Lägg till nytt evenemang</h1>
+        <button onclick="sendToSite('menu.html')">Tillbaka</button>
+    </div><!-- /header -->
+
+    <div class="ui-content">
+        <form>
+            <input type="text" id="eventname" placeholder="Namn" data-theme="a">
+            <input type="date" id="eventdate" placeholder="Datum" data-theme="a">
+        </form>
+        <button class="ui-btn ui-corner-all ui-btn-a" onclick="addEvent()">Skapa evenemang</button>
+
+    </div>
+
+</div><!-- /page -->
+</body>
+</html>

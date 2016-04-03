@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>jQuery Mobile test page</title>
+    <meta charset=utf-8 />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="jquery.mobile-1.4.5.min.css" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="javascript/jquery.min.js"></script>
+    <script src="javascript/jquery.mobile-1.4.5.min.js"></script>
+    <script src="javascript/scripts.js"></script>
+
+</head>
+<body>
+<div data-role="page" id="participantPage">
+    <div data-role="header">
+        <h1>Hantera deltagare</h1>
+        <button onclick="sendToSite('menu.html')">Tillbaka</button>
+    </div><!-- /header -->
+
+    <div class="ui-content">
+        <a href="#popupLogin" data-rel="popup" data-position-to="window" class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-icon-check ui-btn-icon-left ui-btn-a" data-transition="pop">Lägg till ny medlem</a>
+        <div data-role="popup" id="popupLogin" data-theme="a" class="ui-corner-all">
+                <div style="padding:10px 20px;">
+                    <input type="text" name="name" id="name" value="" placeholder="Namn med efternamn" data-theme="a">
+                    <input type="tel" name="personnr" id="personnr" value="" placeholder="Personnummer" data-theme="a">
+                    <input type="checkbox" id="rqmember" name="rqmember">
+                    <label for="rqmember">Ragequitmedlem</label>
+                    <button class="ui-btn ui-corner-all ui-shadow ui-btn-b ui-btn-icon-left ui-icon-check" id="addMember" onclick="addMember()">Lägg till</button>
+                </div>
+        </div>
+
+        <ul id="memberList" data-role="listview" data-filter="true" data-filter-placeholder="Sök bland medlemmar..." data-inset="true">
+        </ul>
+        <script src="javascript/addParticipantScript.js"></script>
+
+    </div>
+
+</div><!-- /page -->
+</body>
+</html>

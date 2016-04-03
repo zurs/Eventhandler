@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<widget xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0" id="com.kabeltv.eventhandler" version="1.0.0">
+  <name>RQ Event</name>
+  <description>En enkel evenemangshanterare för evenemang hållna utav Ragequit</description>
+  <author href="http://ragequit.nu" email="ragequitvaxjo@gmail.com">Ragequit</author>
+  <content src="index.html"/>
+  <icon src="icon.png" />
+  <gap:platform name="android" />
+</widget>

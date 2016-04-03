@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>jQuery Mobile test page</title>
+    <meta charset=utf-8 />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="jquery.mobile-1.4.5.min.css" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="javascript/jquery.min.js"></script>
+    <script src="javascript/jquery.mobile-1.4.5.min.js"></script>
+    <script src="javascript/scripts.js"></script>
+</head>
+<body>
+<div data-role="page">
+    <div data-role="header">
+        <h1>Login</h1>
+    </div><!-- /header -->
+    <div data-role="main" class="ui-content">
+        <script>
+            loggedIn();
+        </script>
+
+        <form action="javascript:login()" >
+            <!-- <label for="fullname" class="ui-hidden-accessible">Username:</label> -->
+            <input type="text" name="manualName" id="fullname" value="" placeholder="Namn" data-theme="a">
+            <label for="password" class="ui-hidden-accessible">Password:</label>
+            <input type="password" name="manualPersonnr" id="password" value="" placeholder="Lösenord" data-theme="a">
+            <input type="submit" name="login" value="Logga in">
+        </form>
+        <button onclick="sendToSite('createuser.html')" >Skapa konto</button>
+     </div>
+
+
+</div><!-- /page -->
+</body>
+</html>

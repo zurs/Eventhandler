@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>jQuery Mobile test page</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="jquery.mobile-1.4.5.min.css" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="javascript/jquery.min.js"></script>
+    <script src="javascript/jquery.mobile-1.4.5.min.js"></script>
+    <script src="javascript/scripts.js"></script>
+
+</head>
+<body>
+<div data-role="page" id="eventpage">
+    <script src="javascript/handleEvent.js"></script>
+    <div data-role="header">
+        <h1>Evenemang</h1>
+        <button onclick="sendToSite('menu.html')">Tillbaka</button>
+    </div>
+
+    <div data-role="main" class="ui-content">
+
+        <ul data-role="listview" id="eventlist" data-inset="true" data-filter="true" data-filter-placeholder="Sök evenemang...">
+        </ul>
+
+        <script>
+            showOldEvents();
+        </script>
+
+        <div data-role="popup" id="popupMenu" data-theme="b">
+            <ul data-role="listview" data-inset="true" style="min-width:210px;">
+                <li><button onclick="handleParticipants()">Hantera deltagare</button></li>
+                <!--  <li><button onclick="alert(currentEvent)">Extrahera info</button></li>  // Kan läggas till om appen ska utökas i framtiden  -->
+            </ul>
+        </div>
+
+        <a href="#popupMenu" data-rel="popup" data-transition="pop" id="popupLink"></a>
+    </div>
+
+</div><!-- /page -->
+</body>
+</html>

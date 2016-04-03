@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>jQuery Mobile test page</title>
+    <meta charset=utf-8 />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="jquery.mobile-1.4.5.min.css" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="javascript/jquery.min.js"></script>
+    <script src="javascript/jquery.mobile-1.4.5.min.js"></script>
+    <script src="javascript/scripts.js"></script>
+</head>
+<body>
+<div data-role="page">
+    <div data-role="header">
+        <h1>Skapa konto</h1>
+        <button onclick="sendToSite('index.html')">Tillbaka</button>
+    </div><!-- /header -->
+
+    <form action="javascript:createUser()" >
+        <input type="text" name="username" id="username" placeholder="Användarnamn" data-theme="a">
+        <input type="text" name="name" id="fullname" placeholder="Namn & efternamn" data-theme="a">
+        <input type="password" name="password" id="password" placeholder="Lösenord" data-theme="a">
+        <input type="password" name="confirmPassword" id="confirmPassword" placeholder="Konfirmera lösenord" data-theme="a">
+    </form>
+    <button onclick="requestAccount()">Ansök om konto</button>
+
+
+</div><!-- /page -->
+</body>
+</html>

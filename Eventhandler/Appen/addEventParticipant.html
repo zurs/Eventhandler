@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>jQuery Mobile test page</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="jquery.mobile-1.4.5.min.css" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="javascript/jquery.min.js"></script>
+    <script src="javascript/jquery.mobile-1.4.5.min.js"></script>
+    <script src="javascript/scripts.js"></script>
+
+</head>
+<body>
+<div data-role="page" id="eventpage">
+    <script src="javascript/handleEvent.js"></script>
+    <div data-role="header">
+        <h1>Evenemang</h1>
+        <button onclick="sendToSite('handleEventParticipants.html')">Tillbaka</button>
+    </div>
+
+    <div data-role="main" class="ui-content">
+        <ul id="memberList" data-role="listview" data-filter="true" data-filter-placeholder="Sök bland medlemmar..." data-inset="true">
+        </ul>
+
+        <script>
+            memberList();
+        </script>
+
+    </div>
+
+</div><!-- /page -->
+</body>
+</html>
